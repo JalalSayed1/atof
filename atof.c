@@ -1,14 +1,22 @@
 //* gcc -o output atof.c && output
 
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
+
+#define MAXLINE 100
 
 double atof(char s[]);
 
-int main()
-{
-    char s[] = "123.456";
-    printf("%f\n", atof(s));
+int main(void) {
+    // rudimentary calculator:
+    double sum, atof(char s[]);
+    char line[MAXLINE];
+    int getline(char line[], int max);
+
+    sum = 0;
+    while (getline(line, MAXLINE) > 0) {
+        printf("\t%g\n", sum += atof(line));
+    }
 
     return 0;
 }
