@@ -63,10 +63,8 @@ double atof(char s[]) {
         power *= 10.0;
     }
 
-
     // for scientific notation:
     if (s[i] == 'e' || s[i] == 'E') {
-        printf("e found\n");
         i++;
         // if we have -ve sign, increase i again:
         sientific_sign = (s[i] == '-') ? -1, i++ : 1;
@@ -78,5 +76,5 @@ double atof(char s[]) {
         return sign * (val / power) * pow(10, sientific_number);
     }
 
-        return sign * (val / power);
-    }
+    return sign * (val / power);
+}
